@@ -1,0 +1,87 @@
+% !Mode\dots ``TeX:UTF-8''
+\documentclass[serif]{beamer}
+%\usetheme{Warsaw}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{euscript}
+%\usepackage{natbib}
+\DeclareGraphicsExtensions{.png,.jpg}
+\usepackage{default}
+
+
+%自定义的宏
+\include{def}
+% 图片路径
+\graphicspath{{img/}}
+\title{BlockChain}
+\subtitle{network flows problems}
+\author{ Liyun Dai}
+
+\institute{RISE, Southwest University, Chongqing, China}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{frame}
+  \frametitle{Table of Contents}
+  \tableofcontents[currentsection]
+\end{frame}
+
+\AtBeginSection[]
+{\begin{frame}
+	\frametitle{Table of Contents}
+		\tableofcontents[currentsection]
+\end{frame}}
+\section{INTRODUCTION}
+
+\begin{frame}{Original problem}
+	\begin{problem}
+		The original problem comes from the idea to have some
+		thing represented as {\color{red}{digital entity}} that can be passed {\color{red}{securely}}
+		from one party to another.
+	\end{problem}
+\end{frame}
+
+\begin{frame}{Example}
+	\begin{example}
+		Imagine you have some money in
+		your bank account, and you would like to securely transfer
+		some of it to another person
+	\end{example}
+	
+	{\Huge Blank is a trusting center.}
+\end{frame}
+
+\begin{frame}{Example 	without bank }
+
+	\begin{problem}
+		Yes it is possible. However, regardless of representation any digital sequence can be copied.
+		This creates the well-known problem of {\color{red}{“double-spending”}}:
+		one person makes an electronic transaction more than once
+		using the same money.
+	\end{problem}
+\end{frame}
+\section{HASH FUNCTIONS}
+\begin{frame}{Hash function}
+	\begin{definition}
+		Hash function is a method to convert data of arbitrary size
+		into a digital string of predefined {\color{red}{fixed length}}, called hash.
+	\end{definition}
+\end{frame}
+\begin{frame}{Hash function}
+		\begin{definition}[cryptographic hash functions]
+			It should be easy to compute the hash, but finding any input to the hash
+			function {\color{red}{must be difficult}}, or better virtually impossible. Hash functions with such a property are sometimes called
+			cryptographic hash functions.
+		\end{definition}
+\end{frame}
+\begin{frame}
+	The best known cryptographic hash functions are
+	{\tt MD5}, {\tt SHA1}, {\tt SHA2}. 
+	\begin{example}
+		An example of {\tt MD5} is this
+		{\tt MD5}(``abc") = 900150983cd24fb0d6963f7d28e17f72
+	\end{example}
+\end{frame}
+
+\end{document}
