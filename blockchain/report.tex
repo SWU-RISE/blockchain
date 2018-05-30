@@ -75,7 +75,7 @@
 			cryptographic hash functions.
 		\end{definition}
 \end{frame}
-\begin{frame}
+\begin{frame}{Example}
 	The best known cryptographic hash functions are
 	{\tt MD5}, {\tt SHA1}, {\tt SHA2}. 
 	\begin{example}
@@ -84,4 +84,24 @@
 	\end{example}
 \end{frame}
 
+
+\begin{frame}{Different types of systems}
+	\begin{figure}
+
+		\includegraphics[width=0.7\textwidth]{types}
+		\label{fig:4D}
+	\end{figure}
+\end{frame}
+\begin{frame}{fundamental questions}
+ Is a blockchain really needed? When is a blockchain required? In
+	what circumstances is blockchain preferred over traditional databases? 
+	\begin{enumerate}[<+->]
+		\item Is high data throughput required? If the answer to this question is yes, then use a traditional database.
+		\item Are updates centrally controlled? If yes, then use a conventional database.
+		\item Do users trust each other? If yes, then use a traditional database.
+		\item Are users anonymous? If yes, then use a public blockchain; if not, then use a private blockchain.
+		\item If consensus is required to be maintained within a consortium then use a private blockchain, otherwise use
+		a public blockchain. 
+	\end{enumerate}
+\end{frame}
 \end{document}
