@@ -14,7 +14,7 @@
 % 图片路径
 \graphicspath{{img/}}
 \title{BlockChain}
-\subtitle{network flows problems}
+%\subtitle{network flows problems}
 \author{ Liyun Dai}
 
 \institute{RISE, Southwest University, Chongqing, China}
@@ -84,15 +84,93 @@
 	\end{example}
 \end{frame}
 
+\begin{frame}{HASHCHAINS}
+		\begin{figure}
+		\includegraphics[width=0.8\textwidth]{hashch}
+		\label{fig:hash}
+	\end{figure}
+	\begin{block}{Integrity}
+		This hashchain has the important property: no data can be modified at any block
+		without affecting the integrity of the subsequent blocks.
+	\end{block}
+	
+	
+\end{frame}
+
+\begin{frame}{Add a new block}
+	Next step is to authorise only one person to create a
+	new block in the chain. One way to do it is {\color{red}{Public Key
+	Cryptography}} (PKC).
+\end{frame}
+
+\section{PUBLIC KEY CRYPTOGRAPHY}
+
+\begin{frame}{PKC}
+	\begin{definition}
+			Given some data m (m for message) {\color{red}{anyone}}
+			can compute encrypted value Enc(m). But, {\color{red}{only the one}} who
+			knows a special key related to this encryption can compute in
+			the opposite way, i.e. find m from Enc(m).
+	\end{definition}
+\end{frame}
+
+\begin{frame}{Two scenarios of PKC}
+	\begin{enumerate}[<+->]
+		\item The first is when one party wants to send a secure message to another.
+		\item Identity certificate.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Send a secure message to another}
+	\begin{figure}
+		\includegraphics[width=0.7\textwidth]{pkc}
+		\label{fig:pkc}
+	\end{figure}	
+\end{frame}
+
+
+
+
+\section{SECURING HASHCHAIN WITH PUBLIC KEY CRYPTOGRAPHY}
+
+\begin{frame}{Problem}
+	\begin{problem}
+		Now, let’s go back to the question of whether it is possible
+		that only one person is enabled to add a block to the hashchain.
+	\end{problem}
+\end{frame}
+
+\begin{frame}{Bitcoin}
+		\begin{figure}
+			\includegraphics[width=0.7\textwidth]{bit}
+			\label{fig:bit}
+		\end{figure}
+	
+\end{frame}
+
+
+\section{BLOCKCHAINS}
+\begin{frame}{BlockChain}
+	\begin{figure}
+		\includegraphics[width=0.7\textwidth]{block}
+		\label{fig:block}
+	\end{figure}
+	
+\end{frame}
+
 
 \begin{frame}{Different types of systems}
+	
 	\begin{figure}
-
 		\includegraphics[width=0.7\textwidth]{types}
 		\label{fig:4D}
 	\end{figure}
+
 \end{frame}
-\begin{frame}{fundamental questions}
+
+
+
+\begin{frame}{Fundamental questions}
  Is a blockchain really needed? When is a blockchain required? In
 	what circumstances is blockchain preferred over traditional databases? 
 	\begin{enumerate}[<+->]
